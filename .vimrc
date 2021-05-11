@@ -8,18 +8,20 @@ call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'terryma/vim-multiple-cursors'
-	Plug 'tpope/vim-eunuch'
 	Plug 'tpope/vim-surround'
-	Plug 'w0rp/ale'
 	Plug 'itchyny/lightline.vim'
 	Plug 'rstacruz/vim-closer'
-	Plug 'joshdick/onedark.vim'
 	Plug 'rstacruz/vim-hyperstyle'
 	Plug 'sheerun/vim-polyglot'
 	Plug 'preservim/nerdcommenter'
-	Plug 'xolox/vim-misc'
-	Plug 'xolox/vim-notes'
 	Plug 'wsdjeg/vim-todo'
+	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+	"Plug 'w0rp/ale'
+
+	" Themes
+	Plug 'ghifarit53/tokyonight-vim'
+	Plug 'joshdick/onedark.vim'
+
 call plug#end()
 
 filetype plugin on
@@ -32,8 +34,17 @@ syntax on
 set autoindent
 set number
 
-let g:lightline = { 'colorscheme': 'onedark' }
-colorscheme onedark
+let g:lightline = { 'colorscheme' : 'tokyonight' }
+"let g:lightline = { 'colorscheme': 'onedark' }
+
+set termguicolors
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
+
+"colorscheme onedark
 "colorscheme nord
 
 let g:notes_directories = ['~/Desktop/random_thoughts']
