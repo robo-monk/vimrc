@@ -1,3 +1,5 @@
+" 11 May 2021 - rrobomonk vim config
+
 " Plugs
 call plug#begin('~/.vim/plugged')
 	Plug 'airblade/vim-gitgutter'
