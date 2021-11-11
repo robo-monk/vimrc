@@ -13,18 +13,20 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'itchyny/lightline.vim'
 	Plug 'rstacruz/vim-closer'
-	Plug 'rstacruz/vim-hyperstyle'
+	"Plug 'rstacruz/vim-hyperstyle'
 	Plug 'sheerun/vim-polyglot'
 	Plug 'preservim/nerdcommenter'
 	Plug 'wsdjeg/vim-todo'
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 	"Plug 'w0rp/ale'
-
+	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 	" Themes
 	Plug 'ghifarit53/tokyonight-vim'
 	Plug 'joshdick/onedark.vim'
 
 call plug#end()
+
+packloadall
 
 filetype plugin on
 
@@ -35,6 +37,8 @@ set laststatus=2
 syntax on
 set autoindent
 set number
+set tabstop=4
+set shiftwidth=4
 
 let g:lightline = { 'colorscheme' : 'tokyonight' }
 "let g:lightline = { 'colorscheme': 'onedark' }
